@@ -1,0 +1,8 @@
+[debug] [2026-01-28T15:58:07.104Z] No OAuth tokens found
+[debug] [2026-01-28T15:58:07.107Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T15:58:07.109Z] No OAuth tokens found
+[debug] [2026-01-28T15:58:07.110Z] No OAuth tokens found
+[error] Failed to fetch Firebase Project from current Studio Workspace: Unable to refresh auth: not yet authenticated.
+[debug] [2026-01-28T15:58:07.110Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/userinfo.email"]
+[debug] [2026-01-28T15:58:07.111Z] > authorizing via signed-in user (realtwothreezero@gmail.com)
