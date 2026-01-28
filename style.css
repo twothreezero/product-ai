@@ -1,1 +1,121 @@
-/* Add styles here */
+:root {
+    --bg-color: #1a1a1a;
+    --primary-color: #ffffff;
+    --secondary-color: #b3b3b3;
+    --accent-color: #ffde59;
+    --glow-color: rgba(255, 222, 89, 0.6);
+
+    --font-family: 'Noto Sans KR', sans-serif;
+    --font-weight-bold: 900;
+    --font-weight-normal: 700;
+    --font-weight-light: 400;
+
+    --noise-url: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMDAgMzAwIj4KICA8ZmlsdGVyIGlkPSJub2lzZSI+CiAgICA8ZmVUdXJidWxlbmNlIGJhc2VGcmVxdWVuY3k9IjAuOCIgbnVtT2N0YXZlcz0iMSIgdHlwZT0iZnJhY3RhbE5vaXNlIiBzdGl0Y2hUaWxlcz0ic3RpdGNoIi8+CiAgICA8ZmVDb2xvck1hdHJpeCB0eXBlPSJzYXR1cmF0ZSIgdmFsdWVzPSIwIi8+CiAgPC9maWx0ZXI+CiAgPHJlY3Qgd2lkdGg9IjMwMCIgaGVpZ2h0PSIzMDAiIGZpbHRlcj0idXJsKCNub2lzZSkiIG9wYWNpdHk9IjAuMDMiLz4KPC9zdmc+');
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--primary-color);
+    font-family: var(--font-family);
+    margin: 0;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-image: var(--noise-url);
+}
+
+.app-container {
+    width: 100%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.app-header {
+    margin-bottom: 3rem;
+}
+
+.app-title {
+    font-size: 3.5rem;
+    font-weight: var(--font-weight-bold);
+    color: var(--primary-color);
+    margin: 0;
+    letter-spacing: -2px;
+}
+
+.app-subtitle {
+    font-size: 1.25rem;
+    font-weight: var(--font-weight-light);
+    color: var(--secondary-color);
+    margin-top: 0.5rem;
+}
+
+.controls {
+    margin-bottom: 3rem;
+}
+
+.generate-button {
+    background: var(--accent-color);
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    padding: 1rem 2.5rem;
+    font-size: 1.2rem;
+    font-weight: var(--font-weight-normal);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 0 20px var(--glow-color), 0 0 30px var(--glow-color);
+}
+
+.generate-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px var(--glow-color), 0 0 40px var(--glow-color), 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.generate-button .feather {
+    transition: transform 0.5s ease-in-out;
+}
+
+.generate-button:hover .feather {
+    transform: rotate(360deg);
+}
+
+.results-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+lotto-ticket {
+    width: 100%;
+    max-width: 360px;
+    display: block;
+    --ticket-bg: #2d2d2d;
+    --ticket-shadow: rgba(0, 0, 0, 0.4);
+    --ticket-glow: rgba(255, 255, 255, 0.05);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+    body {
+        padding: 1rem;
+    }
+    .app-title {
+        font-size: 2.5rem;
+    }
+    .app-subtitle {
+        font-size: 1rem;
+    }
+    .generate-button {
+        padding: 0.8rem 1.8rem;
+        font-size: 1rem;
+    }
+    .results-container {
+        grid-template-columns: 1fr;
+    }
+}
