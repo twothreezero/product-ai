@@ -265,6 +265,65 @@ lotto-ticket {
     min-height: 200px;
 }
 
+/* Info Section */
+.info-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    text-align: left;
+    margin-bottom: 2rem;
+}
+
+.info-block {
+    background: var(--input-bg);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 1px solid var(--input-border);
+    transition: transform 0.3s ease;
+}
+
+.info-block:hover {
+    transform: translateY(-5px);
+}
+
+.info-block h3 {
+    color: var(--accent-color);
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.info-block p {
+    color: var(--primary-color);
+    line-height: 1.6;
+    margin: 0;
+    font-size: 0.95rem;
+    opacity: 0.9;
+}
+
+/* Footer */
+.app-footer {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.footer-nav {
+    margin-top: 0.5rem;
+}
+
+.footer-nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footer-nav a:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
 
 /* Responsive */
 @media (max-width: 600px) {
