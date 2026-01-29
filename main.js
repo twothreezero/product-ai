@@ -112,3 +112,31 @@ generateBtn.addEventListener('click', () => {
 
     resultsContainer.prepend(ticketElement);
 });
+
+// Theme Toggle Logic
+const themeToggleBtn = document.getElementById('theme-toggle');
+const sunIcon = themeToggleBtn.querySelector('.sun-icon');
+const moonIcon = themeToggleBtn.querySelector('.moon-icon');
+const body = document.body;
+
+// Check for saved user preference, if any, on load of the website
+const currentTheme = localStorage.getItem('theme');
+if (currentTheme === 'light') {
+    body.classList.add('light-mode');
+    sunIcon.style.display = 'none';
+    moonIcon.style.display = 'block';
+}
+
+themeToggleBtn.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    
+    if (body.classList.contains('light-mode')) {
+        sunIcon.style.display = 'none';
+        moonIcon.style.display = 'block';
+        localStorage.setItem('theme', 'light');
+    } else {
+        sunIcon.style.display = 'block';
+        moonIcon.style.display = 'none';
+        localStorage.setItem('theme', 'dark');
+    }
+});
